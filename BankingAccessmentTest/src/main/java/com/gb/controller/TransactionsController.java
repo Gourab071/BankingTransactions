@@ -13,7 +13,7 @@ public class TransactionsController {
 	@Autowired
 	private TransactionsServiceImpl trService;
 
-	@GetMapping("/api/data")
+	@GetMapping("/admin/transactions")
 	public String getPendingTransactions(@RequestParam String type) {
 		if (type.equalsIgnoreCase("pending")) {
 			return trService.getPendingData().toString();
